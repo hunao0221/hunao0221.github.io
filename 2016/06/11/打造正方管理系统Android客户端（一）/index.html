@@ -90,16 +90,16 @@
 <meta property="og:url" content="http://hunao.info/2016/06/11/打造正方管理系统Android客户端（一）/index.html">
 <meta property="og:site_name" content="一个人胡闹的日子">
 <meta property="og:description" content="一个大学没有自己的移动客户端，不能忍！查成绩，课表考试都要打开网页，不能忍！超级课程表丑陋的UI不能忍！广告不能忍！那么既然这么多不能忍，那不如我们自己开发一个，当然，指望正方给你提供API那是不可能的了，所以，就只有爬网页了。">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2029141-03dd33495e5f865a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2029141-c855bd35e59a8b51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2029141-8c482f145a9650d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2029141-0550d1c8ecfae4e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2029141-31139682f5f5bd1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2029141-03dd33495e5f865a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2029141-c855bd35e59a8b51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2029141-8c482f145a9650d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2029141-0550d1c8ecfae4e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/2029141-31139682f5f5bd1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:updated_time" content="2016-06-11T00:08:06.147Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="打造正方管理系统Android客户端（一）">
 <meta name="twitter:description" content="一个大学没有自己的移动客户端，不能忍！查成绩，课表考试都要打开网页，不能忍！超级课程表丑陋的UI不能忍！广告不能忍！那么既然这么多不能忍，那不如我们自己开发一个，当然，指望正方给你提供API那是不可能的了，所以，就只有爬网页了。">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2029141-03dd33495e5f865a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/2029141-03dd33495e5f865a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -347,7 +347,7 @@
 <li>首先进入你学校的正方管理系统首页，比如我们学校的<a href="http://210.44.159.4/" target="_blank" rel="external">首页</a>，chrome打开开发者选项；顶部选项卡切换到<strong>Network</strong>界面；</li>
 <li>登录你的账号，登录成功后查看chrome开发者工具</li>
 </ol>
-<p><img src="http://upload-images.jianshu.io/upload_images/2029141-03dd33495e5f865a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>黑框中的就是我们需要的，当然有可能你学校的是<strong>defaultX</strong>，貌似用default1~6 6个页面吧。然后我们点一下他，就会看到具体的Headers信息，这是我们需要的，首先我们先看最下面的<strong>Form Data</strong> 如图：<br><img src="http://upload-images.jianshu.io/upload_images/2029141-c855bd35e59a8b51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="form data"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2029141-03dd33495e5f865a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>黑框中的就是我们需要的，当然有可能你学校的是<strong>defaultX</strong>，貌似用default1~6 6个页面吧。然后我们点一下他，就会看到具体的Headers信息，这是我们需要的，首先我们先看最下面的<strong>Form Data</strong> 如图：<br><img src="https://upload-images.jianshu.io/upload_images/2029141-c855bd35e59a8b51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="form data"></p>
 <p>这些就是我们请求的表单数据；<br>前面两个 <code>__VIEWSTATE</code>，<code>__VIEWSTATEGENERATOR</code>不知道什么意思，一会直接复制那个值就可以了。</p>
 <blockquote>
 <p>txtUserName ： 用户名<br>TextBox2 : 密码<br>txtSecretCode : 验证码<br>RadioButtonList1:用户类型，学生，教师<br>Button1:  不知道是什么，传一个空字符串就可以了<br>lbLanguage : 不知道是什么，传一个空字符串就可以了</p>
@@ -362,7 +362,7 @@
 </blockquote>
 <p>有了上面的这些信息，我们就可以在手机上请求登录了，激动吧！<br>等等，那个验证码我们怎么得到呢？</p>
 <p>######获取验证码<br>不着急，这个好办；回到正方管理系统首页；鼠标放在验证码上面，然后右键-检查，就会看到：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2029141-8c482f145a9650d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="验证码url"><br>黑框中的链接就是验证码的url，然后，右键-Copy link address 就可以得到我们的验证码url了，不信的话可以复制到浏览器打开，看是不是我们的验证码呢；</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2029141-8c482f145a9650d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="验证码url"><br>黑框中的链接就是验证码的url，然后，右键-Copy link address 就可以得到我们的验证码url了，不信的话可以复制到浏览器打开，看是不是我们的验证码呢；</p>
 <blockquote>
 <p><a href="http://210.44.159.4/CheckCode.aspx" target="_blank" rel="external">http://210.44.159.4/CheckCode.aspx</a></p>
 </blockquote>
@@ -388,8 +388,8 @@
 <li><p>大功告成<br>我们跑起来吧；</p>
 </li>
 </ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/2029141-0550d1c8ecfae4e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="登录界面"><br>哈哈，是不是有了，还有模有样的，激动吗？<br>我们输入信息登录试一试；</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2029141-31139682f5f5bd1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="登录成功"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2029141-0550d1c8ecfae4e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="登录界面"><br>哈哈，是不是有了，还有模有样的，激动吗？<br>我们输入信息登录试一试；</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2029141-31139682f5f5bd1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="登录成功"></p>
 <p>我们看一下网页的源代码，是不是包含上面的代码呢，是不是发现了什么，<br>“欢迎您 ：”，“xxx同学”，哈哈，这个就是我们在网页登录成功之后的右上角显示的欢迎信息的源代码。这就说明我们<strong>登录成功</strong>了。<br>当然还有的情况就是验证码错误，密码错误以及用户名不存在，同样我们也可以从源代码看出来， 其实在网页上就是显示了一个<code>alert()</code>的弹窗，里面有提示信息，所以，我们在手机上就很容易判断出事登录成功了，还是登录失败了，然后写上相关的逻辑，我这里就不一一写出来了，交给你吧，其实在上面，我已经给你简单的判断了一下了。<br>好了，上面的就是今天的内容，后面的内容我将介绍大家最关心的考试查询，成绩查询和课表查询</p>
 <p>本教程的Demo我已经托管了Github上；<br>项目地址:<a href="https://github.com/hunao0221/LoginDemo" target="_blank" rel="external">https://github.com/hunao0221/LoginDemo</a></p>
 
